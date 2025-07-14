@@ -1,6 +1,8 @@
 package com.example.dto;
 
-import lombok.Data;
+import lombok.*;
+
+@Data
 
 
 public class ProductDto {
@@ -61,4 +63,6 @@ public class ProductDto {
     public void setQuantity(Integer quantity) {
         this.quantity = quantity;
     }
+
+
 }
