@@ -43,7 +43,8 @@ public class ProductController {
         try {
              allProducts = productService.getAllProducts();
             if(CollectionUtils.isEmpty(allProducts)){
-                return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+
+                return new ResponseEntity<>("No Content present",HttpStatus.OK);
             }
         }catch (Exception e){
             return new ResponseEntity<>(e.getMessage(),HttpStatus.INTERNAL_SERVER_ERROR);
@@ -91,8 +92,8 @@ public class ProductController {
                                                  @RequestParam(name = "sortBy", defaultValue = "id") String sortBy,
                                                  @RequestParam(name = "sortDir", defaultValue = "asc") String sortDir) {
         ProductResponse productResponse = null;
-//		String name = null;
-//		name.toUpperCase();
+		String name = null;
+		name.toUpperCase();
         try {
 
             productResponse = productService.getProductwithPagination(pageNo, pageSize, sortBy, sortDir);

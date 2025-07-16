@@ -13,7 +13,7 @@ import java.util.List;
 public class ProductResponse {
 
     private List<ProductDto> products;
-    private long totalelements;
+    private long totalElements;
     private int totalpages;
     private Boolean isFirst;
     private Boolean isLast;

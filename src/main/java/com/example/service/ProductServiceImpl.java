@@ -90,7 +90,7 @@ public class ProductServiceImpl implements ProductService{
         boolean first = page.isFirst();
         boolean last = page.isLast();
 
-        ProductResponse productResponse = ProductResponse.builder().products(productsDtos).totalelements(totalelements)
+        ProductResponse productResponse = ProductResponse.builder().products(productsDtos).totalElements(totalelements)
                 .totalpages(totalPages).isFirst(first).isLast(last).pageNo(pageNo).pageSize(pageSize).build();
 
         return productResponse;
